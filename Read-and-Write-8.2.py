@@ -22,13 +22,15 @@ def my_sorted(full_text):
     return files_sorted
 
 def data_output(file_names, full_text, files_sorted):
-    with open('temp\\out_f.txt', 'w', encoding='utf8') as out_file:
+    crlf = ''
+    with open('temp\\out_f.txt', 'wt', encoding='utf8') as out_file:
         for i in range(len(full_text)):
-            print(file_names[files_sorted[i][0]], file=out_file)
-            print(files_sorted[i][1], file=out_file)
+            print(crlf + file_names[files_sorted[i][0]], file=out_file, end='')
+            if crlf == '': crlf = '\n'
+            print(crlf + str(files_sorted[i][1]), file=out_file)
             for eny in full_text[files_sorted[i][0]]:
-                print(eny, end='', file=out_file)
-            print(file=out_file)
+                print(eny, file=out_file, end='')
+            print(file=out_file, end='')
     return files_sorted
 
 
