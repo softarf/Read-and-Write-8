@@ -76,6 +76,20 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+# И сами Блокоты, в том числе
+*.ipynb
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Папки с виртуальными средами для домашних работ
+home_work_*/
+
+# Папки с лекционными тестами
+lecture_test*/
 
 # IPython
 profile_default/
